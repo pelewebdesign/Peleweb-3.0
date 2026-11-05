@@ -1,0 +1,45 @@
+---
+const { t, lang, altHref } = Astro.props;
+const home = t.ui.home;
+const frHref = lang === 'fr' ? home : altHref;
+const enHref = lang === 'en' ? home : altHref;
+---
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <a class="logo" href={home}><span class="logo-orb" aria-hidden="true"></span>peleweb</a>
+        <p>{t.ft.text}</p>
+      </div>
+      <div>
+        <h2 class="mono" style="margin: 0 0 18px; color: var(--muted); font-weight: 500">Navigation</h2>
+        <ul>
+          <li><a href={`${home}#services`}>{t.nav.services}</a></li>
+          <li><a href={`${home}#projets`}>{t.nav.projets}</a></li>
+          <li><a href={`${home}#methode`}>{t.nav.methode}</a></li>
+          <li><a href={`${home}#tarifs`}>{t.nav.tarifs}</a></li>
+          <li><a href={`${home}#faq`}>FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="mono" style="margin: 0 0 18px; color: var(--muted); font-weight: 500">Contact</h2>
+        <ul>
+          <li><a href={t.mailto}>contact@peleweb.com</a></li>
+          <li><a href={t.mailto}>{t.nav.cta}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="mono" style="margin: 0 0 18px; color: var(--muted); font-weight: 500">{t.ft.langs}</h2>
+        <ul>
+          <li><a href={frHref} lang="fr" hreflang="fr">Français</a></li>
+          <li><a href={enHref} lang="en" hreflang="en">English</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="giant gt" aria-hidden="true">peleweb</p>
+    <div class="ft-bot">
+      <span>© {new Date().getFullYear()} Peleweb by Umberto Persichini</span>
+      <a href={t.ui.legalPath}>{t.ft.legal}</a>
+    </div>
+  </div>
+</footer>

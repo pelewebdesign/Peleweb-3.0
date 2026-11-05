@@ -1,0 +1,23 @@
+---
+const { t, faq } = Astro.props;
+const f = t.faq;
+---
+<section class="sec" id="faq" aria-labelledby="faq-title" style="padding-top: 60px">
+  <div class="wrap">
+    <div class="faq-grid">
+      <div class="faq-side rv">
+        <span class="lbl mono">{f.lbl}</span>
+        <h2 class="disp h2" id="faq-title">{f.h2a}<span class="gt">{f.h2b}</span></h2>
+        <p>{f.side} <a href={t.mailto}>contact@peleweb.com</a>.</p>
+      </div>
+      <div class="faq-list">
+        {faq.map((item) => (
+          <details open={item.open}>
+            <summary>{item.question}<span class="pl" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
+            <p>{item.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

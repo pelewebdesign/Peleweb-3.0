@@ -1,0 +1,37 @@
+---
+import Arrow from './Arrow.astro';
+import Grain from './Grain.astro';
+const { t } = Astro.props;
+const p = t.proc;
+const steps = [
+  { ...p.c1, cls: 'pcard pc1', words: p.w1, pastel: false },
+  { ...p.c2, cls: 'pcard pc2 pastel force-ink', words: p.w2, pastel: true, star: true },
+  { ...p.c3, cls: 'pcard pc3', words: p.w3, pastel: false },
+];
+---
+<section class="proc" id="methode" aria-labelledby="proc-title">
+  <div class="blob b1" aria-hidden="true"></div>
+  <div class="blob b2" aria-hidden="true"></div>
+  <Grain />
+  <div class="wrap">
+    <p class="lbl mono">{p.lbl}</p>
+    <h2 class="sr" id="proc-title">{p.title}</h2>
+    <div class="pwords">
+      {steps.map((s, i) => (
+        <>
+          <p class="disp pword" aria-hidden="true"><span class="fill fill-scroll">{s.words}</span>{s.star && <span class="ast gt">*</span>}</p>
+          <article class={s.cls}>
+            {s.pastel && <Grain soft />}
+            <p class="k mono" style="position: relative; z-index: 2"><span>{s.k}</span><span>0{i + 1} / 03</span></p>
+            <h3 style="position: relative; z-index: 2">{s.title}</h3>
+            <p class="chips" style="position: relative; z-index: 2">{s.chips.map((c) => <span>{c}</span>)}</p>
+          </article>
+        </>
+      ))}
+    </div>
+    <div class="outro rv">
+      <div class="statement"><span class="par" aria-hidden="true">(</span><p>{p.outro}</p><span class="par" aria-hidden="true">)</span></div>
+      <a class="btn btn-solid" href={t.mailto}>{p.cta}<span class="ar"><Arrow /></span></a>
+    </div>
+  </div>
+</section>

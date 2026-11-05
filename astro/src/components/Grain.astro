@@ -1,0 +1,5 @@
+---
+/** Texture de grain posée par-dessus un dégradé. `soft` pour les fonds pastel. */
+const { soft = false } = Astro.props;
+---
+<svg class:list={['grain', { 'grain-soft': soft }]} aria-hidden="true"><rect width="100%" height="100%" filter="url(#pwGrain)"></rect></svg>

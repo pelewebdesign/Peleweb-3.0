@@ -1,0 +1,24 @@
+---
+/** Bandeau des logos clients : toujours sur fond blanc, dans les deux thèmes. */
+const { t, clients } = Astro.props;
+---
+{clients.length > 0 && (
+  <section class="logos" aria-label={t.logos.title}>
+    <p class="mono">{t.logos.title}</p>
+    <div class="lg-mq">
+      <div class="lg-track">
+        {[0, 1].map((copy) => (
+          <ul class="lg-seq" aria-hidden={copy === 1 ? 'true' : undefined} style="list-style: none; margin: 0; padding-left: 0">
+            {clients.map((c) => (
+              <li class="lg-slot">
+                {c.logo
+                  ? <img src={c.logo} alt={copy === 0 ? c.name : ''} loading="lazy" decoding="async" height="56" />
+                  : c.name}
+              </li>
+            ))}
+          </ul>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
