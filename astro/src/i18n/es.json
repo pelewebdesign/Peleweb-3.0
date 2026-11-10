@@ -1,0 +1,264 @@
+{
+  "mailto": "mailto:contact@peleweb.com?subject=Nuevo%20proyecto%20web",
+  "navAria": "Navegación principal",
+  "mnavAria": "Menú móvil",
+  "nav": {
+    "services": "Servicios",
+    "projets": "Proyectos",
+    "tarifs": "Tarifas",
+    "cta": "Contactar"
+  },
+  "hero": {
+    "who": "Umberto Persichini — Desarrollador web freelance",
+    "l1": "Su socio",
+    "l2": "freelance",
+    "l3": "WordPress",
+    "rotPre": "Webs que",
+    "r1": "atraen.",
+    "r2": "convierten.",
+    "r3": "inspiran confianza.",
+    "r4": "perduran.",
+    "text": "Acompaño a emprendedores, autónomos y pymes con webs WordPress rápidas, modernas y optimizadas para el SEO, que atraen visitas y las convierten en clientes.",
+    "cta1": "Iniciar su proyecto",
+    "cta2": "Ver mis proyectos",
+    "ring": "DISEÑO • REDISEÑO • E-COMMERCE • SEO • MANTENIMIENTO • ",
+    "n1": "70+",
+    "s1": "proyectos web realizados",
+    "n2": "6",
+    "s2": "años de experiencia",
+    "n3": "3",
+    "s3": "idiomas de trabajo: francés, inglés, español"
+  },
+  "logos": {
+    "aria": "Han confiado en mí"
+  },
+  "svc": {
+    "lbl": "(01) — Servicios",
+    "h2a": "Servicios a la medida de",
+    "h2b": "sus necesidades",
+    "lead": "De la creación al mantenimiento, me encargo de todo para que su web trabaje para usted.",
+    "url": "su-web.com",
+    "s1": {
+      "title": "Creación de webs",
+      "text": "Una web pensada para su actividad, sus objetivos y sus clientes, entregada llave en mano y fácil de modificar.",
+      "link": "Iniciar su proyecto"
+    },
+    "s2": {
+      "title": "Rediseño",
+      "text": "Convierta una web anticuada en una verdadera herramienta comercial: diseño moderno, contenidos claros y mayor velocidad."
+    },
+    "s3": {
+      "title": "E-commerce",
+      "text": "Una tienda WooCommerce fácil de gestionar, con pago seguro y gestión de stock y envíos."
+    },
+    "s4": {
+      "title": "Posicionamiento SEO",
+      "text": "Mejore su visibilidad en Google y atraiga a más visitantes cualificados."
+    },
+    "s5": {
+      "title": "Mantenimiento",
+      "text": "Mantenga su web segura, actualizada y rápida, sin tener que ocuparse de ello."
+    },
+    "s6": {
+      "title": "Alojamiento",
+      "text": "Me encargo desde el principio: elección del dominio, alojamiento, correos y puesta en línea."
+    }
+  },
+  "bld": {
+    "t1": "Título",
+    "t2": "Imagen",
+    "t3": "Botón",
+    "t4": "Tarjetas",
+    "pub": "Publicar",
+    "done": "Web publicada"
+  },
+  "app": {
+    "lbl": "(02) — Enfoque",
+    "role": "Desarrollador web freelance en francés, inglés y español",
+    "tab1": "Artesanos",
+    "tab2": "Autónomos",
+    "tab3": "Pymes",
+    "tab4": "Agencias",
+    "tab5": "Profesionales",
+    "chip1": "Rápida",
+    "chip2": "Responsive",
+    "tag1": "Diseño",
+    "tag2": "Desarrollo",
+    "tag3": "Alojamiento",
+    "c1a": "Una web pensada para su actividad:",
+    "c1b": "artesanos, autónomos, pymes o agencias.",
+    "c2a": "Webs rápidas y modernas,",
+    "c2b": "optimizadas para Google desde el primer día.",
+    "c3a": "Todo el proyecto en las mismas manos:",
+    "c3b": "diseño, desarrollo, alojamiento y mantenimiento."
+  },
+  "who": {
+    "lbl": "(03) — ¿Para quién?",
+    "h2a": "Webs para",
+    "h2b": "autónomos",
+    "h2c": "y",
+    "h2d": "pequeñas empresas",
+    "lead": "Cada proyecto se adapta a su oficio, a sus clientes y a su presupuesto.",
+    "rows": [
+      {
+        "n": "01",
+        "title": "Artesanos y comercios",
+        "text": "Una web que le ayuda a que le encuentren, a mostrar su saber hacer y a atraer nuevos clientes."
+      },
+      {
+        "n": "02",
+        "title": "Autónomos",
+        "text": "Una web profesional para presentar su experiencia, reforzar su credibilidad y hacer crecer su actividad."
+      },
+      {
+        "n": "03",
+        "title": "Profesiones liberales",
+        "text": "Una presencia online profesional y que inspira confianza, para ganar visibilidad y generar nuevos contactos."
+      },
+      {
+        "n": "04",
+        "title": "Empresas y pymes",
+        "text": "Una web eficaz y escalable que acompaña su crecimiento y convierte a sus visitantes en oportunidades."
+      },
+      {
+        "n": "05",
+        "title": "Agencias",
+        "text": "Un socio WordPress de confianza para dar vida a sus proyectos web, en marca blanca o como refuerzo de su equipo."
+      }
+    ]
+  },
+  "proj": {
+    "lbl": "(04) — Proyectos",
+    "h2a": "Últimos",
+    "h2b": "proyectos"
+  },
+  "proc": {
+    "lbl": "(05) — Método",
+    "title": "Las etapas de su proyecto: idea, concepción, lanzamiento",
+    "w1": "Idea",
+    "w2": "Concepción",
+    "w3": "Lanzamiento",
+    "c1": {
+      "k": "Descubrimiento",
+      "title": "Empezamos por entender su actividad, sus objetivos y sus clientes.",
+      "chips": [
+        "Llamada inicial",
+        "Brief y alcance",
+        "Calendario y presupuesto"
+      ]
+    },
+    "c2": {
+      "k": "Creación",
+      "title": "Diseño a medida, desarrollo, animaciones e integración de contenidos.",
+      "chips": [
+        "Maqueta",
+        "Desarrollo",
+        "Contenidos"
+      ]
+    },
+    "c3": {
+      "k": "Puesta en línea",
+      "title": "El día del lanzamiento, sigo a su lado para que su web evolucione.",
+      "chips": [
+        "Pruebas",
+        "Puesta en línea",
+        "Mantenimiento"
+      ]
+    },
+    "outro": "Llevo su idea de la concepción a la puesta en línea, sin pasos innecesarios.",
+    "cta": "Pedir presupuesto"
+  },
+  "tar": {
+    "lbl": "(06) — Tarifas",
+    "h2a": "Tarifas ",
+    "h2b": "claras",
+    "h2c": "",
+    "lead": "Cada proyecto recibe un presupuesto personalizado y gratuito.",
+    "from": "Desde",
+    "tax": "IVA incl.",
+    "btn": "Pedir presupuesto",
+    "note": "¿Una necesidad específica?",
+    "noteLink": "Hablemos",
+    "maint": {
+      "title": "Mantenimiento",
+      "lead": "Una web actualizada, con copias de seguridad y segura, sin que tenga que preocuparse.",
+      "tax": "IVA incl. / mes",
+      "btn": "Hablemos",
+      "items": [
+        {
+          "name": "Mantenimiento web corporativa",
+          "from": "",
+          "price": "49 €",
+          "desc": "Actualizaciones, copias de seguridad y seguridad de su web corporativa."
+        },
+        {
+          "name": "Mantenimiento e-commerce",
+          "from": "Desde",
+          "price": "79 €",
+          "desc": "Actualizaciones de WooCommerce, copias de seguridad y seguimiento de su tienda."
+        },
+        {
+          "name": "Mantenimiento y alojamiento",
+          "from": "Desde",
+          "price": "99 €",
+          "desc": "El mantenimiento, con el alojamiento y el dominio incluidos."
+        }
+      ]
+    }
+  },
+  "rev": {
+    "lbl": "(07) — Opiniones",
+    "h2a": "Lo que dicen ",
+    "h2b": "mis clientes",
+    "h2c": "",
+    "hint": "Deslice →",
+    "aria": "Opiniones de clientes",
+    "stars": "5 de 5 estrellas",
+    "more": "Ver más opiniones",
+    "moreUrl": "https://www.malt.fr/profile/umbertopersichini"
+  },
+  "faq": {
+    "lbl": "(08) — Preguntas",
+    "h2a": "Preguntas ",
+    "h2b": "frecuentes",
+    "side": "¿No encuentra su respuesta? Escríbame a"
+  },
+  "cta": {
+    "lbl": "(09) — Contacto",
+    "l1": "¿Listo para lanzar",
+    "l2": "su proyecto?",
+    "lead": "Escríbame unas líneas sobre su proyecto: le responderé con una primera opinión y un presupuesto gratuito y sin compromiso.",
+    "btn": "Iniciar su proyecto"
+  },
+  "ft": {
+    "text": "Creación, rediseño, mantenimiento y alojamiento de webs WordPress para autónomos, pymes y agencias.",
+    "langs": "Idiomas",
+    "legal": "Aviso legal"
+  },
+  "meta": {
+    "title": "Peleweb — Desarrollador web freelance, especialista en WordPress",
+    "description": "Umberto Persichini, desarrollador web freelance especialista en WordPress: creación, rediseño, e-commerce, SEO, mantenimiento y alojamiento de webs rápidas y a medida.",
+    "locale": "es_ES"
+  },
+  "ui": {
+    "logoAria": "Peleweb, inicio",
+    "skip": "Ir al contenido",
+    "toLight": "Cambiar a modo claro",
+    "toDark": "Cambiar a modo oscuro",
+    "menuOpen": "Abrir el menú",
+    "menuClose": "Cerrar el menú",
+    "namePh": "[Nombre Apellido]",
+    "companyPh": "[Empresa]",
+    "shotAlt": "Captura de la web",
+    "legalPath": "/es/aviso-legal/",
+    "home": "/es/",
+    "legalTitle": "Aviso legal"
+  },
+  "lang": {
+    "label": "Idioma",
+    "current": "ES",
+    "fr": "Français",
+    "en": "English",
+    "es": "Español"
+  }
+}

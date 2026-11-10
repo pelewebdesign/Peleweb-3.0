@@ -1,0 +1,91 @@
+---
+/**
+ * Méthode : sur grand écran, la section reste épinglée pendant le défilement.
+ * Chaque étape met son mot en avant et fait entrer sa carte (gauche, droite, gauche),
+ * comme sur anfalova.art. Sur mobile, ou si les animations sont réduites,
+ * les étapes s'affichent simplement les unes sous les autres.
+ */
+import Arrow from './Arrow.astro';
+import Grain from './Grain.astro';
+const { t } = Astro.props;
+const p = t.proc;
+const steps = [
+  { ...p.c1, word: p.w1, side: 'left', rot: '-6deg' },
+  { ...p.c2, word: p.w2, side: 'right', rot: '5deg' },
+  { ...p.c3, word: p.w3, side: 'left', rot: '-4deg' },
+];
+---
+<section class="proc" id="methode" aria-labelledby="proc-title">
+  <div class="blob b1" aria-hidden="true"></div>
+  <div class="blob b2" aria-hidden="true"></div>
+  <Grain />
+  <div class="wrap proc-head">
+    <p class="lbl mono">{p.lbl}</p>
+    <h2 class="sr" id="proc-title">{p.title}</h2>
+  </div>
+
+  <div class="proc-pin" data-proc data-step="0">
+    <div class="proc-stage">
+      <div class="pwords" aria-hidden="true">
+        {steps.map((s, i) => (
+          <p class:list={['disp', 'pword', { 'is-active': i === 0 }]} data-i={i}><span>{s.word}</span></p>
+        ))}
+      </div>
+      <div class="pcards">
+        {steps.map((s, i) => (
+          <article class:list={['pcard', `pcard-${s.side}`, { 'pastel force-ink': i === 1 }]} data-i={i} style={`--r: ${s.rot}`}>
+            {i === 1 && <Grain soft />}
+            <p class="k mono"><span>{s.k}</span><span>0{i + 1} / 03</span></p>
+            <h3>{s.title}</h3>
+            <p class="chips">{s.chips.map((c: string) => <span>{c}</span>)}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap outro rv">
+    <p class="statement">{p.outro}</p>
+    <a class="btn btn-solid" href={t.mailto}>{p.cta}<span class="ar"><Arrow /></span></a>
+  </div>
+</section>
+
+<script>
+  const pin = document.querySelector<HTMLElement>('[data-proc]');
+  const section = pin?.closest<HTMLElement>('.proc');
+  if (pin && section) {
+    const words = pin.querySelectorAll<HTMLElement>('.pword');
+    const cards = pin.querySelectorAll<HTMLElement>('.pcard');
+    const canPin = window.matchMedia('(min-width: 961px) and (prefers-reduced-motion: no-preference)');
+    let ticking = false;
+
+    const update = () => {
+      ticking = false;
+      if (!section.classList.contains('is-pinned')) return;
+      const rect = pin.getBoundingClientRect();
+      const total = pin.offsetHeight - window.innerHeight;
+      const progress = Math.min(Math.max(-rect.top / total, 0), 1);
+      const step = progress < 0.34 ? 0 : progress < 0.67 ? 1 : 2;
+      if (pin.dataset.step === String(step)) return;
+      pin.dataset.step = String(step);
+      words.forEach((w) => w.classList.toggle('is-active', Number(w.dataset.i) === step));
+      cards.forEach((c) => {
+        const i = Number(c.dataset.i);
+        c.dataset.state = i === step ? 'in' : i < step ? 'past' : 'next';
+      });
+    };
+
+    const setMode = () => {
+      section.classList.toggle('is-pinned', canPin.matches);
+      pin.dataset.step = '';
+      update();
+    };
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    window.addEventListener('resize', update);
+    canPin.addEventListener('change', setMode);
+    setMode();
+  }
+</script>

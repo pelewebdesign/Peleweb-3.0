@@ -1,0 +1,43 @@
+---
+import type { Lang } from '../lib/content';
+const { t, paths } = Astro.props;
+const home = t.ui.home;
+const langs: Lang[] = ['fr', 'en', 'es'];
+---
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <a class="logo" href={home}><span class="logo-orb" aria-hidden="true"></span>peleweb</a>
+        <p>{t.ft.text}</p>
+      </div>
+      <div>
+        <h2 class="ft-h mono">Navigation</h2>
+        <ul>
+          <li><a href={`${home}#services`}>{t.nav.services}</a></li>
+          <li><a href={`${home}#projets`}>{t.nav.projets}</a></li>
+          <li><a href={`${home}#tarifs`}>{t.nav.tarifs}</a></li>
+          <li><a href={`${home}#faq`}>FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="ft-h mono">Contact</h2>
+        <ul>
+          <li><a href={t.mailto}>contact@peleweb.com</a></li>
+          <li><a href={t.mailto}>{t.nav.cta}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="ft-h mono">{t.ft.langs}</h2>
+        <ul>
+          {langs.map((l) => <li><a href={paths[l]} lang={l} hreflang={l}>{t.lang[l]}</a></li>)}
+        </ul>
+      </div>
+    </div>
+    <p class="giant gt" aria-hidden="true">peleweb</p>
+    <div class="ft-bot">
+      <span>© {new Date().getFullYear()} Peleweb by Umberto Persichini</span>
+      <a href={t.ui.legalPath}>{t.ft.legal}</a>
+    </div>
+  </div>
+</footer>

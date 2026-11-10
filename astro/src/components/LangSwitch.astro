@@ -1,0 +1,27 @@
+---
+/** Sélecteur de langue FR / EN / ES (menu déroulant natif, sans JavaScript). */
+import type { Lang } from '../lib/content';
+const { t, lang, paths, inline = false } = Astro.props as {
+  t: any; lang: Lang; paths: Record<Lang, string>; inline?: boolean;
+};
+const langs: Lang[] = ['fr', 'en', 'es'];
+---
+{inline ? (
+  <p class="lang-inline" aria-label={t.lang.label}>
+    {langs.map((l) => (
+      <a href={paths[l]} lang={l} hreflang={l} aria-current={l === lang ? 'page' : undefined}>{l.toUpperCase()}</a>
+    ))}
+  </p>
+) : (
+  <details class="lang">
+    <summary aria-label={`${t.lang.label} : ${t.lang[lang]}`}>
+      {t.lang.current}
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+    </summary>
+    <ul>
+      {langs.map((l) => (
+        <li><a href={paths[l]} lang={l} hreflang={l} aria-current={l === lang ? 'page' : undefined}><span>{l.toUpperCase()}</span>{t.lang[l]}</a></li>
+      ))}
+    </ul>
+  </details>
+)}
