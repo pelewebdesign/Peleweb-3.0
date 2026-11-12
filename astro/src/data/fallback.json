@@ -1,0 +1,497 @@
+{
+  "clients": [
+    {
+      "name": "Ajuste",
+      "logo": "/images/logos/ajuste.svg"
+    },
+    {
+      "name": "Askovet",
+      "logo": "/images/logos/askovet.svg"
+    },
+    {
+      "name": "Axotime",
+      "logo": "/images/logos/axotime.png"
+    },
+    {
+      "name": "Biomedah",
+      "logo": "/images/logos/biomedah.svg"
+    },
+    {
+      "name": "Clémentine Anfray Avocate",
+      "logo": "/images/logos/clementine-anfray.png"
+    },
+    {
+      "name": "Co Devenir",
+      "logo": "/images/logos/co-devenir.png"
+    },
+    {
+      "name": "Coach de Paris",
+      "logo": "/images/logos/coach-de-paris.png"
+    },
+    {
+      "name": "Les conciergeries du monde",
+      "logo": "/images/logos/conciergeries-du-monde.png"
+    },
+    {
+      "name": "Eidos Academy",
+      "logo": "/images/logos/eidos-academy.png"
+    },
+    {
+      "name": "Eidos Agency",
+      "logo": "/images/logos/eidos-agency.png"
+    },
+    {
+      "name": "Forcola",
+      "logo": "/images/logos/forcola.svg"
+    },
+    {
+      "name": "German with Jen",
+      "logo": "/images/logos/german-with-jen.png"
+    },
+    {
+      "name": "Projet Isika",
+      "logo": "/images/logos/isika.png"
+    },
+    {
+      "name": "Pain Vin Company",
+      "logo": "/images/logos/pain-vin-company.png"
+    },
+    {
+      "name": "Paris & Co",
+      "logo": "/images/logos/paris-and-co.svg"
+    },
+    {
+      "name": "Tancredo",
+      "logo": "/images/logos/tancredo.svg"
+    },
+    {
+      "name": "Victoire Martini",
+      "logo": "/images/logos/victoire-martini.png"
+    }
+  ],
+  "projects": [
+    {
+      "name": "German with Jen",
+      "url": "https://germanwithjen.de/en/",
+      "domain": "germanwithjen.de",
+      "image": "/images/projects/german-with-jen.webp",
+      "image_small": "/images/projects/german-with-jen-720.webp",
+      "type": {
+        "fr": "Site vitrine",
+        "en": "Business website",
+        "es": "Web corporativa"
+      },
+      "tag": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
+      "desc": {
+        "fr": "Site web bilingue pour une professeure d’allemand en ligne.",
+        "en": "Bilingual website for an online German teacher.",
+        "es": "Web bilingüe para una profesora de alemán online."
+      },
+      "short": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    {
+      "name": "Ajuste",
+      "url": "https://ajustecorps.fr/",
+      "domain": "ajustecorps.fr",
+      "image": "/images/projects/ajuste.webp",
+      "image_small": "/images/projects/ajuste-720.webp",
+      "type": {
+        "fr": "Site vitrine",
+        "en": "Business website",
+        "es": "Web corporativa"
+      },
+      "tag": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
+      "desc": {
+        "fr": "Site vitrine pour des cours de yoga santé à Nantes et à Tours.",
+        "en": "Business website for health-focused yoga classes in Nantes and Tours.",
+        "es": "Web corporativa para clases de yoga y salud en Nantes y Tours."
+      },
+      "short": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    {
+      "name": "La Hitillère",
+      "url": "https://la-hitillere.com/",
+      "domain": "la-hitillere.com",
+      "image": "/images/projects/la-hitillere.webp",
+      "image_small": "/images/projects/la-hitillere-720.webp",
+      "type": {
+        "fr": "Site vitrine",
+        "en": "Business website",
+        "es": "Web corporativa"
+      },
+      "tag": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
+      "desc": {
+        "fr": "Site du restaurant et bar à tapas, avec agenda des évènements et concerts.",
+        "en": "Website for a restaurant and tapas bar, with an events and concerts calendar.",
+        "es": "Web de un restaurante y bar de tapas, con agenda de eventos y conciertos."
+      },
+      "short": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    {
+      "name": "Victoire Martini",
+      "url": "https://www.victoiremartini.com/",
+      "domain": "victoiremartini.com",
+      "image": "/images/projects/victoire-martini.webp",
+      "image_small": "/images/projects/victoire-martini-720.webp",
+      "type": {
+        "fr": "Site vitrine",
+        "en": "Business website",
+        "es": "Web corporativa"
+      },
+      "tag": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
+      "desc": {
+        "fr": "Site d’une architecte d’intérieur et agent immobilier, avec portfolio.",
+        "en": "Website for an interior architect and real estate agent, with portfolio.",
+        "es": "Web de una arquitecta de interiores y agente inmobiliaria, con portafolio."
+      },
+      "short": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    {
+      "name": "Forcola",
+      "url": "https://forcolaconseil.com/",
+      "domain": "forcolaconseil.com",
+      "image": "/images/projects/forcola.webp",
+      "image_small": "/images/projects/forcola-720.webp",
+      "type": {
+        "fr": "Site vitrine",
+        "en": "Business website",
+        "es": "Web corporativa"
+      },
+      "tag": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
+      "desc": {
+        "fr": "Site d’un cabinet de conseil en communication, marketing et développement commercial.",
+        "en": "Website for a communication, marketing and business development consultancy.",
+        "es": "Web de una consultora de comunicación, marketing y desarrollo comercial."
+      },
+      "short": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    {
+      "name": "Axotime",
+      "url": "https://axotime.com/",
+      "domain": "axotime.com",
+      "image": "/images/projects/axotime.webp",
+      "image_small": "/images/projects/axotime-720.webp",
+      "type": {
+        "fr": "Site vitrine",
+        "en": "Business website",
+        "es": "Web corporativa"
+      },
+      "tag": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      },
+      "desc": {
+        "fr": "Site d’un organisme de formations en IA, langues, bureautique, informatique et management.",
+        "en": "Website for a training provider in AI, languages, office software, IT and management.",
+        "es": "Web de un centro de formación en IA, idiomas, ofimática, informática y gestión."
+      },
+      "short": {
+        "fr": "",
+        "en": "",
+        "es": ""
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Léna Louiche",
+      "company": "Eidos Academy",
+      "featured": true,
+      "logo": "/images/logos/eidos-academy.png",
+      "photo": null,
+      "quote": {
+        "fr": "Umberto est d’une efficacité redoutable ! Je vous recommande son travail les yeux fermés !",
+        "en": "Umberto is remarkably efficient! I recommend his work without hesitation!",
+        "es": "¡Umberto es de una eficacia impresionante! Recomiendo su trabajo con los ojos cerrados."
+      }
+    },
+    {
+      "name": "Jennifer Wagner",
+      "company": "German with Jen",
+      "featured": false,
+      "logo": "/images/logos/german-with-jen.png",
+      "photo": null,
+      "quote": {
+        "fr": "Je suis très satisfaite de mon site web, la communication avec Umberto a été excellente et les délais ont été respectés. Merci, je recommande vivement !",
+        "en": "I’m very happy with my website. Communication with Umberto was excellent and deadlines were met. Thank you, I highly recommend him!",
+        "es": "Estoy muy satisfecha con mi web: la comunicación con Umberto fue excelente y se respetaron los plazos. ¡Gracias, lo recomiendo totalmente!"
+      }
+    },
+    {
+      "name": "Cédric De La Fontaine",
+      "company": "Les conciergeries du monde",
+      "featured": false,
+      "logo": "/images/logos/conciergeries-du-monde.png",
+      "photo": null,
+      "quote": {
+        "fr": "Exactement conforme à la maquette. Nos prochains sites seront faits avec lui.",
+        "en": "Exactly true to the mockup. Our next websites will be built with him.",
+        "es": "Exactamente igual que la maqueta. Nuestras próximas webs las haremos con él."
+      }
+    },
+    {
+      "name": "Rémy Pautrat",
+      "company": "Coach de Paris",
+      "featured": false,
+      "logo": "/images/logos/coach-de-paris.png",
+      "photo": null,
+      "quote": {
+        "fr": "Du grand art et beaucoup de talents chez Umberto. Je lui ai confié mon site WordPress de coaching vieillissant (à distance) et il a su le transformer en une très belle création. Cette refonte est donc un plein succès.",
+        "en": "Real artistry and plenty of talent from Umberto. I entrusted him, remotely, with my outdated WordPress coaching website, and he turned it into a beautiful new creation. This redesign is a complete success.",
+        "es": "Un auténtico arte y mucho talento por parte de Umberto. Le confié, a distancia, mi anticuada web de coaching en WordPress y supo transformarla en una creación preciosa. Este rediseño es todo un éxito."
+      }
+    }
+  ],
+  "faq": [
+    {
+      "open": true,
+      "question": {
+        "fr": "Combien de temps faut-il pour créer un site ?",
+        "en": "How long does it take to build a website?",
+        "es": "¿Cuánto tiempo se tarda en crear una web?"
+      },
+      "answer": {
+        "fr": "Cela dépend du projet. Un site vitrine prend en général 1 à 2 semaines, un site e-commerce entre 3 et 4 semaines. Je vous donne un planning précis avec le devis.",
+        "en": "It depends on the project. A business website usually takes 1 to 2 weeks, an online store 3 to 4 weeks. You get a detailed schedule with the quote.",
+        "es": "Depende del proyecto. Una web corporativa suele llevar de 1 a 2 semanas y una tienda online, de 3 a 4 semanas. Con el presupuesto le doy un calendario preciso."
+      }
+    },
+    {
+      "open": false,
+      "question": {
+        "fr": "Pourquoi WordPress ?",
+        "en": "Why WordPress?",
+        "es": "¿Por qué WordPress?"
+      },
+      "answer": {
+        "fr": "WordPress est le CMS le plus utilisé au monde. Il est fiable, évolutif et vous permet de modifier vos contenus vous-même, sans dépendre d’un développeur.",
+        "en": "WordPress is the most widely used CMS in the world. It is reliable, scalable and lets you update your content yourself, without relying on a developer.",
+        "es": "WordPress es el CMS más utilizado del mundo. Es fiable, escalable y le permite modificar sus contenidos usted mismo, sin depender de un desarrollador."
+      }
+    },
+    {
+      "open": false,
+      "question": {
+        "fr": "Pourrai-je modifier mon site moi-même ?",
+        "en": "Will I be able to update my website myself?",
+        "es": "¿Podré modificar mi web yo mismo?"
+      },
+      "answer": {
+        "fr": "Oui. Chaque site est livré avec une documentation de prise en main, pour que vous puissiez mettre à jour vos textes, images et pages en toute autonomie. Une petite formation en ligne est également possible en option.",
+        "en": "Yes. Every website comes with a getting-started guide, so you can update your text, images and pages on your own. A short online training session is also available as an option.",
+        "es": "Sí. Cada web se entrega con una guía de uso para que pueda actualizar sus textos, imágenes y páginas con total autonomía. También es posible una breve formación online como opción."
+      }
+    },
+    {
+      "open": false,
+      "question": {
+        "fr": "Est-ce que vous vous occupez de l’hébergement et du nom de domaine ?",
+        "en": "Do you take care of hosting and the domain name?",
+        "es": "¿Se encarga del alojamiento y del dominio?"
+      },
+      "answer": {
+        "fr": "Oui, je peux tout prendre en charge : choix et achat du nom de domaine, hébergement, adresses email et mise en ligne.",
+        "en": "Yes, I can handle everything: choosing and buying the domain name, hosting, email addresses and launch.",
+        "es": "Sí, puedo encargarme de todo: elección y compra del dominio, alojamiento, direcciones de correo y puesta en línea."
+      }
+    },
+    {
+      "open": false,
+      "question": {
+        "fr": "Le référencement est-il inclus ?",
+        "en": "Is SEO included?",
+        "es": "¿Está incluido el posicionamiento SEO?"
+      },
+      "answer": {
+        "fr": "Les bases du référencement naturel sont incluses dans chaque site : structure, balises, vitesse et compatibilité mobile. Un accompagnement SEO plus poussé est proposé en option.",
+        "en": "SEO essentials are included in every website: structure, tags, speed and mobile-friendliness. More in-depth SEO support is available as an option.",
+        "es": "Las bases del posicionamiento natural están incluidas en cada web: estructura, etiquetas, velocidad y adaptación a móviles. También ofrezco un acompañamiento SEO más avanzado como opción."
+      }
+    },
+    {
+      "open": false,
+      "question": {
+        "fr": "Dans quelles langues travaillez-vous ?",
+        "en": "Which languages do you work in?",
+        "es": "¿En qué idiomas trabaja?"
+      },
+      "answer": {
+        "fr": "Je travaille en français, en anglais et en espagnol, et je peux réaliser des sites multilingues.",
+        "en": "I work in French, English and Spanish, and I can build multilingual websites.",
+        "es": "Trabajo en francés, inglés y español, y puedo crear webs multilingües."
+      }
+    }
+  ],
+  "pricing": [
+    {
+      "featured": false,
+      "name": {
+        "fr": "Site vitrine",
+        "en": "Business website",
+        "es": "Web corporativa"
+      },
+      "desc": {
+        "fr": "Pour présenter votre activité et être trouvé en ligne.",
+        "en": "To present your business and get found online.",
+        "es": "Para presentar su actividad y que le encuentren en internet."
+      },
+      "price": {
+        "fr": "499 €",
+        "en": "€499",
+        "es": "499 €"
+      },
+      "items": {
+        "fr": [
+          "Jusqu’à 5 pages",
+          "Design sur mesure et responsive",
+          "Formulaire de contact",
+          "Bases du référencement SEO",
+          "Documentation de prise en main"
+        ],
+        "en": [
+          "Up to 5 pages",
+          "Custom, responsive design",
+          "Contact form",
+          "SEO essentials",
+          "Getting-started guide"
+        ],
+        "es": [
+          "Hasta 5 páginas",
+          "Diseño a medida y responsive",
+          "Formulario de contacto",
+          "Bases del posicionamiento SEO",
+          "Guía de uso"
+        ]
+      }
+    },
+    {
+      "featured": false,
+      "name": {
+        "fr": "Site professionnel",
+        "en": "Professional website",
+        "es": "Web profesional"
+      },
+      "desc": {
+        "fr": "Pour présenter en détail vos services et développer votre activité.",
+        "en": "To showcase your services in detail and grow your business.",
+        "es": "Para presentar en detalle sus servicios y hacer crecer su negocio."
+      },
+      "price": {
+        "fr": "799 €",
+        "en": "€799",
+        "es": "799 €"
+      },
+      "items": {
+        "fr": [
+          "Jusqu’à 10 pages",
+          "Design sur mesure et responsive",
+          "Une page dédiée par service",
+          "Blog ou actualités",
+          "Référencement SEO optimisé",
+          "Documentation de prise en main"
+        ],
+        "en": [
+          "Up to 10 pages",
+          "Custom, responsive design",
+          "A dedicated page for each service",
+          "Blog or news section",
+          "Optimised SEO",
+          "Getting-started guide"
+        ],
+        "es": [
+          "Hasta 10 páginas",
+          "Diseño a medida y responsive",
+          "Una página para cada servicio",
+          "Blog o noticias",
+          "Posicionamiento SEO optimizado",
+          "Guía de uso"
+        ]
+      }
+    },
+    {
+      "featured": false,
+      "name": {
+        "fr": "Site e-commerce",
+        "en": "E-commerce website",
+        "es": "Tienda online"
+      },
+      "desc": {
+        "fr": "Pour vendre vos produits ou services en ligne.",
+        "en": "To sell your products or services online.",
+        "es": "Para vender sus productos o servicios en internet."
+      },
+      "price": {
+        "fr": "1099 €",
+        "en": "€1099",
+        "es": "1099 €"
+      },
+      "items": {
+        "fr": [
+          "Boutique WooCommerce",
+          "Intégration de 20 produits",
+          "Paiement sécurisé",
+          "Gestion des produits, stocks et livraisons",
+          "Pages légales et CGV",
+          "Documentation de gestion de la boutique"
+        ],
+        "en": [
+          "WooCommerce store",
+          "Up to 20 products",
+          "Secure payments",
+          "Product, stock and shipping management",
+          "Legal pages and terms of sale",
+          "Store management guide"
+        ],
+        "es": [
+          "Tienda WooCommerce",
+          "Integración de 20 productos",
+          "Pago seguro",
+          "Gestión de productos, stock y envíos",
+          "Páginas legales y condiciones de venta",
+          "Guía de gestión de la tienda"
+        ]
+      }
+    }
+  ]
+}

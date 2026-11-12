@@ -1,0 +1,107 @@
+---
+/**
+ * Pages légales, en français, anglais et espagnol :
+ *  - page="legal"   : mentions légales / legal notice / aviso legal
+ *  - page="privacy" : politique de confidentialité / privacy policy / política de privacidad
+ *
+ * Les textes sont dans l'objet `content` ci-dessous. Seul élément restant à compléter :
+ * le numéro SIRET (cherchez « SIRET » dans ce fichier).
+ */
+import Base from '../layouts/Base.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import type { Lang } from '../lib/content';
+import { t as dictionary } from '../i18n';
+
+interface Props { lang: Lang; page: 'legal' | 'privacy' }
+const { lang, page } = Astro.props;
+const t = dictionary(lang);
+
+const SIRET = '[à compléter]';
+const UPDATED = { fr: '12 novembre 2026', en: '12 November 2026', es: '12 de noviembre de 2026' };
+const mail = '<a href="mailto:contact@peleweb.com">contact@peleweb.com</a>';
+const address = '7 rue de l’Amazone, 95490 Vauréal, France';
+const netlify = 'Netlify, Inc. — 101 2nd Street, San Francisco, CA 94105, USA — <a href="https://www.netlify.com" rel="noopener">netlify.com</a>';
+
+const allPaths = {
+  legal: { fr: '/mentions-legales/', en: '/en/legal-notice/', es: '/es/aviso-legal/' },
+  privacy: { fr: '/politique-de-confidentialite/', en: '/en/privacy-policy/', es: '/es/politica-de-privacidad/' },
+};
+const paths = allPaths[page];
+
+type Section = { h: string; p: string };
+const content: Record<'legal' | 'privacy', Record<Lang, Section[]>> = {
+  legal: {
+    fr: [
+      { h: 'Éditeur du site', p: `Le site peleweb.com est édité par <strong>Umberto Persichini</strong>, entrepreneur individuel (micro-entreprise) exerçant sous le nom commercial <strong>Peleweb</strong>.<br>Adresse : ${address}<br>SIRET : ${SIRET}<br>Email : ${mail}` },
+      { h: 'Directeur de la publication', p: 'Umberto Persichini.' },
+      { h: 'Hébergement', p: `Le site est hébergé par ${netlify}.` },
+      { h: 'Propriété intellectuelle', p: 'L’ensemble des contenus de ce site (textes, illustrations, graphismes, code) est la propriété de Peleweb, sauf mention contraire. Toute reproduction, totale ou partielle, sans autorisation écrite préalable est interdite.<br>Les logos, noms et captures d’écran des sites clients sont la propriété de leurs titulaires respectifs et sont présentés à titre de références.' },
+      { h: 'Liens externes', p: 'Le site contient des liens vers des sites tiers (réalisations, profils). Peleweb n’exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.' },
+      { h: 'Données personnelles et cookies', p: `Le traitement de vos données est détaillé dans la <a href="${allPaths.privacy.fr}">politique de confidentialité</a>. Le site n’utilise aucun cookie de mesure d’audience ni de publicité.` },
+    ],
+    en: [
+      { h: 'Publisher', p: `peleweb.com is published by <strong>Umberto Persichini</strong>, sole trader (French micro-entreprise) trading as <strong>Peleweb</strong>.<br>Address: ${address}<br>Company number (SIRET): ${SIRET}<br>Email: ${mail}` },
+      { h: 'Publication director', p: 'Umberto Persichini.' },
+      { h: 'Hosting', p: `The website is hosted by ${netlify}.` },
+      { h: 'Intellectual property', p: 'All content on this website (text, illustrations, graphics, code) belongs to Peleweb unless stated otherwise. Any full or partial reproduction without prior written permission is prohibited.<br>Client logos, names and website screenshots belong to their respective owners and are shown as references.' },
+      { h: 'External links', p: 'This website links to third-party websites (projects, profiles). Peleweb has no control over them and accepts no liability for their content.' },
+      { h: 'Personal data and cookies', p: `How your data is handled is described in the <a href="${allPaths.privacy.en}">privacy policy</a>. This website uses no analytics or advertising cookies.` },
+    ],
+    es: [
+      { h: 'Responsable del sitio', p: `El sitio peleweb.com lo edita <strong>Umberto Persichini</strong>, empresario individual (micro-entreprise francesa) con el nombre comercial <strong>Peleweb</strong>.<br>Dirección: ${address}<br>Número de empresa (SIRET): ${SIRET}<br>Email: ${mail}` },
+      { h: 'Director de la publicación', p: 'Umberto Persichini.' },
+      { h: 'Alojamiento', p: `El sitio está alojado por ${netlify}.` },
+      { h: 'Propiedad intelectual', p: 'Todos los contenidos de este sitio (textos, ilustraciones, gráficos, código) pertenecen a Peleweb, salvo indicación contraria. Queda prohibida su reproducción total o parcial sin autorización previa por escrito.<br>Los logotipos, nombres y capturas de los sitios de clientes pertenecen a sus respectivos titulares y se muestran como referencias.' },
+      { h: 'Enlaces externos', p: 'El sitio contiene enlaces a sitios de terceros (proyectos, perfiles). Peleweb no tiene control sobre ellos y declina toda responsabilidad sobre su contenido.' },
+      { h: 'Datos personales y cookies', p: `El tratamiento de sus datos se detalla en la <a href="${allPaths.privacy.es}">política de privacidad</a>. El sitio no utiliza cookies de medición de audiencia ni de publicidad.` },
+    ],
+  },
+  privacy: {
+    fr: [
+      { h: 'Responsable du traitement', p: `Umberto Persichini (Peleweb, micro-entreprise), ${address}. Contact : ${mail}` },
+      { h: 'Données collectées', p: 'Le site ne comporte ni formulaire, ni compte utilisateur, ni outil de suivi. Les seules données traitées sont :<br>• <strong>les messages que vous envoyez par email</strong> (nom, adresse email, contenu du message, et toute information que vous choisissez de partager) ;<br>• <strong>les données techniques de connexion</strong> (adresse IP, type de navigateur, pages demandées), enregistrées automatiquement par l’hébergeur pour afficher le site et le protéger.' },
+      { h: 'Finalités et bases légales', p: '• Répondre à vos demandes et établir un devis : mesures précontractuelles prises à votre demande (art. 6.1.b du RGPD).<br>• Assurer le fonctionnement et la sécurité du site : intérêt légitime (art. 6.1.f du RGPD).<br>• Si vous devenez client : exécution du contrat et obligations comptables (art. 6.1.b et 6.1.c du RGPD).' },
+      { h: 'Durées de conservation', p: '• Échanges avec un prospect : 3 ans à compter du dernier contact.<br>• Documents liés à un contrat et pièces comptables : 10 ans, conformément au Code de commerce.<br>• Journaux techniques de l’hébergeur : selon la politique de Netlify, pour une durée limitée.' },
+      { h: 'Destinataires et hébergement', p: `Vos données sont destinées uniquement à Peleweb et ne sont jamais vendues ni cédées. Elles peuvent être traitées par les prestataires techniques suivants : l’hébergeur du site, ${netlify}, et le fournisseur de messagerie de contact@peleweb.com (OVHcloud, France).<br>Netlify est situé aux États-Unis : ce transfert est encadré par le Data Privacy Framework UE–États-Unis, auquel Netlify adhère.` },
+      { h: 'Cookies et stockage local', p: 'Le site ne dépose <strong>aucun cookie</strong> de mesure d’audience, de publicité ou de réseaux sociaux, et les polices de caractères sont hébergées sur le site lui-même : aucune donnée n’est transmise à un tiers lors de votre visite. C’est pourquoi aucun bandeau de consentement n’est affiché.<br>Seul votre choix de thème (clair ou sombre) est enregistré dans votre navigateur (stockage local), à votre demande, pour être retrouvé à la visite suivante. Vous pouvez l’effacer à tout moment depuis les réglages de votre navigateur.' },
+      { h: 'Vos droits', p: `Vous disposez d’un droit d’accès, de rectification, d’effacement, de limitation, d’opposition et de portabilité de vos données. Pour les exercer, écrivez à ${mail}. Une réponse vous est apportée dans un délai d’un mois.<br>Si vous estimez que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL : <a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>.` },
+    ],
+    en: [
+      { h: 'Data controller', p: `Umberto Persichini (Peleweb, French micro-entreprise), ${address}. Contact: ${mail}` },
+      { h: 'Data collected', p: 'This website has no forms, no user accounts and no tracking tools. The only data processed is:<br>• <strong>messages you send by email</strong> (name, email address, message content and any information you choose to share);<br>• <strong>technical connection data</strong> (IP address, browser type, requested pages), logged automatically by the host to serve and protect the website.' },
+      { h: 'Purposes and legal bases', p: '• Answering your requests and preparing a quote: pre-contractual steps taken at your request (Art. 6(1)(b) GDPR).<br>• Running and securing the website: legitimate interest (Art. 6(1)(f) GDPR).<br>• If you become a client: performance of the contract and accounting obligations (Art. 6(1)(b) and 6(1)(c) GDPR).' },
+      { h: 'Retention periods', p: '• Exchanges with prospects: 3 years from the last contact.<br>• Contract documents and accounting records: 10 years, as required by French commercial law.<br>• Host technical logs: for a limited period, according to Netlify’s policy.' },
+      { h: 'Recipients and hosting', p: `Your data is intended for Peleweb only and is never sold or shared. It may be processed by the following technical providers: the website host, ${netlify}, and the email provider for contact@peleweb.com (OVHcloud, France).<br>Netlify is based in the United States: this transfer is covered by the EU–US Data Privacy Framework, in which Netlify participates.` },
+      { h: 'Cookies and local storage', p: 'This website sets <strong>no cookies</strong> for analytics, advertising or social media, and its fonts are hosted on the website itself: no data is sent to third parties when you visit. That is why no consent banner is shown.<br>Only your theme choice (light or dark) is saved in your browser (local storage), at your request, so it is remembered on your next visit. You can clear it at any time in your browser settings.' },
+      { h: 'Your rights', p: `You have the right to access, rectify, erase, restrict, object to and port your data. To exercise these rights, email ${mail}. You will receive an answer within one month.<br>If you believe your rights have not been respected, you can lodge a complaint with the French data protection authority (CNIL): <a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>.` },
+    ],
+    es: [
+      { h: 'Responsable del tratamiento', p: `Umberto Persichini (Peleweb, micro-entreprise francesa), ${address}. Contacto: ${mail}` },
+      { h: 'Datos recogidos', p: 'El sitio no tiene formularios, cuentas de usuario ni herramientas de seguimiento. Los únicos datos tratados son:<br>• <strong>los mensajes que envía por email</strong> (nombre, dirección de email, contenido del mensaje y cualquier información que decida compartir);<br>• <strong>los datos técnicos de conexión</strong> (dirección IP, tipo de navegador, páginas solicitadas), registrados automáticamente por el alojamiento para mostrar y proteger el sitio.' },
+      { h: 'Finalidades y bases jurídicas', p: '• Responder a sus solicitudes y preparar un presupuesto: medidas precontractuales a petición suya (art. 6.1.b del RGPD).<br>• Garantizar el funcionamiento y la seguridad del sitio: interés legítimo (art. 6.1.f del RGPD).<br>• Si se convierte en cliente: ejecución del contrato y obligaciones contables (art. 6.1.b y 6.1.c del RGPD).' },
+      { h: 'Plazos de conservación', p: '• Intercambios con clientes potenciales: 3 años desde el último contacto.<br>• Documentos contractuales y contables: 10 años, conforme al Código de Comercio francés.<br>• Registros técnicos del alojamiento: durante un tiempo limitado, según la política de Netlify.' },
+      { h: 'Destinatarios y alojamiento', p: `Sus datos están destinados únicamente a Peleweb y nunca se venden ni se ceden. Pueden ser tratados por los siguientes proveedores técnicos: el alojamiento del sitio, ${netlify}, y el proveedor de correo de contact@peleweb.com (OVHcloud, Francia).<br>Netlify está ubicado en Estados Unidos: esta transferencia está amparada por el Marco de Privacidad de Datos UE–EE. UU., al que Netlify está adherido.` },
+      { h: 'Cookies y almacenamiento local', p: 'El sitio <strong>no instala cookies</strong> de medición de audiencia, publicidad ni redes sociales, y las fuentes tipográficas están alojadas en el propio sitio: no se envía ningún dato a terceros durante su visita. Por eso no se muestra ningún banner de consentimiento.<br>Solo su elección de tema (claro u oscuro) se guarda en su navegador (almacenamiento local), a petición suya, para recordarla en su próxima visita. Puede borrarla en cualquier momento desde los ajustes del navegador.' },
+      { h: 'Sus derechos', p: `Tiene derecho de acceso, rectificación, supresión, limitación, oposición y portabilidad de sus datos. Para ejercerlos, escriba a ${mail}. Recibirá una respuesta en el plazo de un mes.<br>Si considera que sus derechos no se han respetado, puede presentar una reclamación ante la autoridad francesa de protección de datos (CNIL): <a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>.` },
+    ],
+  },
+};
+
+const title = page === 'legal' ? t.ui.legalTitle : t.ui.privacyTitle;
+const updatedLabel = { fr: 'Dernière mise à jour', en: 'Last updated', es: 'Última actualización' }[lang];
+---
+<Base lang={lang} title={`${title} — Peleweb`} description={t.meta.description} locale={t.meta.locale} paths={paths}>
+  <Header t={t} lang={lang} paths={paths} />
+  <main id="contenu" class="wrap legal">
+    <h1>{title}</h1>
+    <p class="legal-date mono">{updatedLabel}{lang === 'fr' ? ' : ' : ': '}{UPDATED[lang]}</p>
+    {content[page][lang].map((s) => (
+      <section>
+        <h2>{s.h}</h2>
+        <p set:html={s.p} />
+      </section>
+    ))}
+  </main>
+  <Footer t={t} lang={lang} paths={paths} />
+</Base>

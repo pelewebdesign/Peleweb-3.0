@@ -1,0 +1,14 @@
+# Configuration Netlify : rien à régler dans l'interface.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Astro 7 demande Node 22.23.4 ou plus récent.
+  NODE_VERSION = "22"
+
+# Cache long pour les fichiers générés (leur nom change à chaque modification).
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

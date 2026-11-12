@@ -1,0 +1,28 @@
+---
+import Grain from './Grain.astro';
+const { t } = Astro.props;
+const w = t.who;
+---
+<section class="sec who force-dark" id="pour-qui" aria-labelledby="who-title">
+  <div class="blob b1" aria-hidden="true"></div>
+  <div class="blob b2" aria-hidden="true"></div>
+  <Grain />
+  <div class="wrap">
+    <div class="head rv">
+      <div>
+        <span class="lbl mono">{w.lbl}</span>
+        <h2 class="disp h2" id="who-title">{w.h2a} <span class="gt">{w.h2b}</span> {w.h2c} <span class="gt">{w.h2d}</span></h2>
+      </div>
+      <p class="lead">{w.lead}</p>
+    </div>
+    <div class="rows">
+      {w.rows.map((r) => (
+        <div class="row rv">
+          <span class="disp n gt" aria-hidden="true">{r.n}</span>
+          <h3 class="disp">{r.title}</h3>
+          <p>{r.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

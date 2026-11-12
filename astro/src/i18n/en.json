@@ -1,0 +1,271 @@
+{
+  "mailto": "mailto:contact@peleweb.com?subject=New%20website%20project",
+  "navAria": "Main navigation",
+  "mnavAria": "Mobile menu",
+  "nav": {
+    "services": "Services",
+    "projets": "Work",
+    "tarifs": "Pricing",
+    "cta": "Contact me"
+  },
+  "hero": {
+    "who": "Umberto Persichini — Freelance web developer",
+    "l1": "Your WordPress",
+    "l2": "freelance",
+    "l3": "partner",
+    "rotPre": "Websites that",
+    "r1": "attract.",
+    "r2": "convert.",
+    "r3": "reassure.",
+    "r4": "last.",
+    "text": "I help entrepreneurs, freelancers and small businesses with fast, modern, SEO-optimised WordPress websites that attract visitors and turn them into clients.",
+    "cta1": "Start your project",
+    "cta2": "See my work",
+    "ring": "DESIGN • REDESIGN • E-COMMERCE • SEO • MAINTENANCE • ",
+    "s1": "web projects delivered",
+    "s2": "years of experience",
+    "s3": "working languages: French, English, Spanish",
+    "n1": "70+",
+    "n2": "6",
+    "n3": "3",
+    "hello": "Hi there!",
+    "hover": "Hover over me",
+    "portrait": "Illustration of Umberto Persichini"
+  },
+  "logos": {
+    "aria": "They trusted me"
+  },
+  "svc": {
+    "lbl": "(01) — Services",
+    "h2a": "Services tailored to",
+    "h2b": "your needs",
+    "lead": "From design to maintenance, I take care of everything so your website works for you.",
+    "url": "your-website.com",
+    "s1": {
+      "title": "Website design",
+      "text": "A website built around your business, your goals and your clients, delivered ready to use and easy to update.",
+      "link": "Start your project"
+    },
+    "s2": {
+      "title": "Redesign",
+      "text": "Turn an outdated website into a real sales tool: modern design, clearer content, faster loading."
+    },
+    "s3": {
+      "title": "E-commerce",
+      "text": "An easy-to-manage WooCommerce store with secure payments, stock and shipping management."
+    },
+    "s4": {
+      "title": "SEO",
+      "text": "Improve your visibility on Google and attract more qualified visitors."
+    },
+    "s5": {
+      "title": "Maintenance",
+      "text": "Keep your website secure, up to date and fast, without having to think about it."
+    },
+    "s6": {
+      "title": "Hosting",
+      "text": "Taken care of from day one: domain name, hosting, email addresses and launch."
+    }
+  },
+  "bld": {
+    "t1": "Heading",
+    "t2": "Image",
+    "t3": "Button",
+    "t4": "Cards",
+    "pub": "Publish",
+    "done": "Website published"
+  },
+  "app": {
+    "lbl": "(02) — Approach",
+    "role": "Freelance web developer in French, English and Spanish",
+    "tab1": "Craftspeople",
+    "tab2": "Freelancers",
+    "tab3": "SMBs",
+    "tab4": "Agencies",
+    "tab5": "Professionals",
+    "chip1": "Fast",
+    "chip2": "Responsive",
+    "tag1": "Design",
+    "tag2": "Development",
+    "tag3": "Hosting",
+    "c1a": "A website built for your business:",
+    "c1b": "craftspeople, freelancers, SMBs or agencies.",
+    "c2a": "Fast, modern websites,",
+    "c2b": "optimised for Google from day one.",
+    "c3a": "The whole project in one pair of hands:",
+    "c3b": "design, development, hosting, maintenance.",
+    "photo": "Photo of Umberto Persichini"
+  },
+  "who": {
+    "lbl": "(03) — Who is it for?",
+    "h2a": "Websites for",
+    "h2b": "freelancers",
+    "h2c": "and",
+    "h2d": "small businesses",
+    "lead": "Every project is tailored to your trade, your clients and your budget.",
+    "rows": [
+      {
+        "n": "01",
+        "title": "Craftspeople & shops",
+        "text": "A website that helps you get found, showcase your craft and attract new customers."
+      },
+      {
+        "n": "02",
+        "title": "Freelancers",
+        "text": "A professional website to present your expertise, build credibility and grow your business."
+      },
+      {
+        "n": "03",
+        "title": "Independent professionals",
+        "text": "A reassuring, professional online presence to gain visibility and generate new leads."
+      },
+      {
+        "n": "04",
+        "title": "Small & medium businesses",
+        "text": "A fast, scalable website that supports your growth and turns visitors into opportunities."
+      },
+      {
+        "n": "05",
+        "title": "Agencies",
+        "text": "A reliable WordPress partner to bring your web projects to life, white-label or as an extension of your team."
+      }
+    ]
+  },
+  "proj": {
+    "lbl": "(04) — Work",
+    "h2a": "Latest",
+    "h2b": "projects"
+  },
+  "proc": {
+    "lbl": "(05) — Process",
+    "title": "Your project, step by step: idea, conception, launch",
+    "w1": "Idea",
+    "w2": "Conception",
+    "w3": "Launch",
+    "c1": {
+      "k": "Discovery",
+      "title": "We start by understanding your business, your goals and your clients.",
+      "chips": [
+        "Intro call",
+        "Brief and scope",
+        "Timeline and quote"
+      ]
+    },
+    "c2": {
+      "k": "Build",
+      "title": "Custom design, development, animations and content setup.",
+      "chips": [
+        "Mockup",
+        "Development",
+        "Content"
+      ]
+    },
+    "c3": {
+      "k": "Launch",
+      "title": "On launch day and after, I stay by your side as your website grows.",
+      "chips": [
+        "Testing",
+        "Launch",
+        "Maintenance"
+      ]
+    },
+    "outro": "I take your idea from concept to launch.",
+    "cta": "Get a quote"
+  },
+  "tar": {
+    "lbl": "(06) — Pricing",
+    "h2a": "",
+    "h2b": "Clear",
+    "h2c": " pricing",
+    "lead": "Every project comes with a free, tailored quote.",
+    "from": "From",
+    "tax": "incl. VAT",
+    "btn": "Get a quote",
+    "note": "Something specific in mind?",
+    "noteLink": "Let’s talk",
+    "maint": {
+      "title": "Maintenance",
+      "lead": "A website that stays updated, backed up and secure, without you having to think about it.",
+      "tax": "incl. VAT / month",
+      "btn": "Let’s talk",
+      "items": [
+        {
+          "name": "Business website maintenance",
+          "price": "€49",
+          "desc": "Updates, backups and security for your business website.",
+          "from": ""
+        },
+        {
+          "name": "E-commerce maintenance",
+          "price": "€79",
+          "desc": "WooCommerce updates, backups and monitoring of your store.",
+          "from": "From"
+        },
+        {
+          "name": "Maintenance & hosting",
+          "price": "€99",
+          "desc": "Maintenance, with hosting and domain name included.",
+          "from": "From"
+        }
+      ]
+    }
+  },
+  "rev": {
+    "lbl": "(07) — Reviews",
+    "h2a": "What ",
+    "h2b": "my clients",
+    "h2c": " say",
+    "hint": "Scroll →",
+    "aria": "Client reviews",
+    "stars": "5 out of 5 stars",
+    "more": "See more reviews",
+    "moreUrl": "https://www.malt.fr/profile/umbertopersichini"
+  },
+  "faq": {
+    "lbl": "(08) — FAQ",
+    "h2a": "Frequently asked ",
+    "h2b": "questions",
+    "side": "Can’t find your answer? Email me at"
+  },
+  "cta": {
+    "lbl": "(09) — Contact",
+    "l1": "Ready to start",
+    "l2": "your project?",
+    "lead": "Send me a few lines about your project: I’ll reply with first thoughts and a free, no-obligation quote.",
+    "btn": "Start your project"
+  },
+  "ft": {
+    "text": "WordPress website design, redesign, maintenance and hosting for freelancers, small businesses and agencies.",
+    "langs": "Languages",
+    "legal": "Legal notice",
+    "privacy": "Privacy policy"
+  },
+  "meta": {
+    "title": "Peleweb — Freelance web developer, WordPress specialist",
+    "description": "Umberto Persichini, freelance web developer and WordPress specialist: fast, tailor-made websites, redesigns, e-commerce, SEO, maintenance and hosting.",
+    "locale": "en_GB"
+  },
+  "ui": {
+    "logoAria": "Peleweb, home",
+    "skip": "Skip to content",
+    "toLight": "Switch to light mode",
+    "toDark": "Switch to dark mode",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "namePh": "[First Last]",
+    "companyPh": "[Company]",
+    "shotAlt": "Screenshot of",
+    "legalPath": "/en/legal-notice/",
+    "home": "/en/",
+    "legalTitle": "Legal notice",
+    "privacyPath": "/en/privacy-policy/",
+    "privacyTitle": "Privacy policy"
+  },
+  "lang": {
+    "label": "Language",
+    "current": "EN",
+    "fr": "Français",
+    "en": "English",
+    "es": "Español"
+  }
+}

@@ -1,0 +1,42 @@
+---
+/** Page d'accueil complète, identique en français et en anglais. */
+import Base from '../layouts/Base.astro';
+import Header from './Header.astro';
+import Hero from './Hero.astro';
+import Logos from './Logos.astro';
+import Services from './Services.astro';
+import Approach from './Approach.astro';
+import Who from './Who.astro';
+import Projects from './Projects.astro';
+import Process from './Process.astro';
+import Pricing from './Pricing.astro';
+import Reviews from './Reviews.astro';
+import Faq from './Faq.astro';
+import Cta from './Cta.astro';
+import Footer from './Footer.astro';
+import { getContent, type Lang } from '../lib/content';
+import { t as dictionary } from '../i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = dictionary(lang);
+const data = await getContent(lang);
+const paths = { fr: '/', en: '/en/', es: '/es/' };
+---
+<Base lang={lang} title={t.meta.title} description={t.meta.description} locale={t.meta.locale} paths={paths}>
+  <Header t={t} lang={lang} paths={paths} />
+  <main id="contenu">
+    <Hero t={t} />
+    <Logos t={t} clients={data.clients} />
+    <Services t={t} />
+    <Approach t={t} />
+    <Who t={t} />
+    <Projects t={t} projects={data.projects} />
+    <Process t={t} />
+    <Pricing t={t} pricing={data.pricing} />
+    <Reviews t={t} reviews={data.reviews} lang={lang} />
+    <Faq t={t} faq={data.faq} />
+    <Cta t={t} />
+  </main>
+  <Footer t={t} lang={lang} paths={paths} />
+</Base>
