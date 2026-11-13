@@ -4,6 +4,7 @@ import Grain from './Grain.astro';
 import PortraitSvg from './PortraitSvg.astro';
 const { t } = Astro.props;
 const h = t.hero;
+const who = h.who.split(' — ');
 ---
 <section class="hero" aria-labelledby="hero-title">
   <div class="blob b1" aria-hidden="true"></div>
@@ -14,7 +15,7 @@ const h = t.hero;
   <Grain />
   <div class="wrap">
     <div class="hero-top">
-      <span class="avail mono"><span class="dot" aria-hidden="true"></span><span>{h.who}</span></span>
+      <span class="avail mono"><span class="dot" aria-hidden="true"></span><span class="av-who"><span>{who[0]}</span>{who[1] && <><span class="av-sep"> — </span><span>{who[1]}</span></>}</span></span>
     </div>
 
     <div class="hero-main">
@@ -30,7 +31,14 @@ const h = t.hero;
         </p>
 
         <div class="hero-row">
-          <p class="hero-text">{h.text}</p>
+          <div class="hero-left">
+            <p class="hero-text">{h.text}</p>
+            <div class="stats">
+              <div class="stat"><b>{h.n1}</b><span>{h.s1}</span></div>
+              <div class="stat"><b>{h.n2}</b><span>{h.s2}</span></div>
+              <div class="stat"><b>{h.n3}</b><span>{h.s3}</span></div>
+            </div>
+          </div>
           <div class="hero-ctas">
             <a class="btn btn-solid" href={t.mailto}>{h.cta1}<span class="ar"><Arrow /></span></a>
             <a class="btn btn-ghost" href="#projets">{h.cta2}</a>
@@ -47,12 +55,6 @@ const h = t.hero;
           <span class="pt-hint mono" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 7.5-6.2 1.6L10 18z"/></svg>{h.hover}</span>
         </div>
       </div>
-    </div>
-
-    <div class="stats">
-      <div class="stat"><b>{h.n1}</b><span>{h.s1}</span></div>
-      <div class="stat"><b>{h.n2}</b><span>{h.s2}</span></div>
-      <div class="stat"><b>{h.n3}</b><span>{h.s3}</span></div>
     </div>
   </div>
 </section>

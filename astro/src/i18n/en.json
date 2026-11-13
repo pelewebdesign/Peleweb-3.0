@@ -24,7 +24,7 @@
     "ring": "DESIGN • REDESIGN • E-COMMERCE • SEO • MAINTENANCE • ",
     "s1": "web projects delivered",
     "s2": "years of experience",
-    "s3": "working languages: French, English, Spanish",
+    "s3": "languages: FR · EN · ES",
     "n1": "70+",
     "n2": "6",
     "n3": "3",
@@ -90,9 +90,9 @@
     "tag3": "Hosting",
     "c1a": "A website built for your business:",
     "c1b": "craftspeople, freelancers, SMBs or agencies.",
-    "c2a": "Fast, modern websites,",
-    "c2b": "optimised for Google from day one.",
-    "c3a": "The whole project in one pair of hands:",
+    "c2a": "High-performing, modern websites,",
+    "c2b": "optimised for Google and AI search.",
+    "c3a": "The whole project in the same hands:",
     "c3b": "design, development, hosting, maintenance.",
     "photo": "Photo of Umberto Persichini"
   },
@@ -241,8 +241,8 @@
     "privacy": "Privacy policy"
   },
   "meta": {
-    "title": "Peleweb — Freelance web developer, WordPress specialist",
-    "description": "Umberto Persichini, freelance web developer and WordPress specialist: fast, tailor-made websites, redesigns, e-commerce, SEO, maintenance and hosting.",
+    "title": "Peleweb — Freelance web developer specialised in WordPress",
+    "description": "Umberto Persichini, freelance web developer specialised in WordPress: website creation, redesign, e-commerce, SEO, maintenance and hosting for high-performing, tailor-made websites.",
     "locale": "en_GB"
   },
   "ui": {
@@ -267,5 +267,13 @@
     "fr": "Français",
     "en": "English",
     "es": "Español"
+  },
+  "consent": {
+    "text": "I use Google Analytics to see how many people visit the website and which pages interest them. These cookies are only set with your consent.",
+    "accept": "Accept",
+    "refuse": "Refuse",
+    "more": "Learn more",
+    "manage": "Manage cookies",
+    "title": "Cookies"
   }
 }

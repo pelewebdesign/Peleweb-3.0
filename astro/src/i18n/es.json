@@ -27,7 +27,7 @@
     "n2": "6",
     "s2": "años de experiencia",
     "n3": "3",
-    "s3": "idiomas de trabajo: francés, inglés, español",
+    "s3": "idiomas: FR · EN · ES",
     "hello": "¡Hola!",
     "hover": "Pasa el ratón",
     "portrait": "Ilustración de Umberto Persichini"
@@ -90,10 +90,10 @@
     "tag3": "Alojamiento",
     "c1a": "Una web pensada para su actividad:",
     "c1b": "artesanos, autónomos, pymes o agencias.",
-    "c2a": "Webs rápidas y modernas,",
-    "c2b": "optimizadas para Google desde el primer día.",
+    "c2a": "Sitios modernos y de alto rendimiento,",
+    "c2b": "optimizados para Google y las IA.",
     "c3a": "Todo el proyecto en las mismas manos:",
-    "c3b": "diseño, desarrollo, alojamiento y mantenimiento.",
+    "c3b": "diseño, desarrollo, alojamiento, mantenimiento.",
     "photo": "Foto de Umberto Persichini"
   },
   "who": {
@@ -241,8 +241,8 @@
     "privacy": "Política de privacidad"
   },
   "meta": {
-    "title": "Peleweb — Desarrollador web freelance, especialista en WordPress",
-    "description": "Umberto Persichini, desarrollador web freelance especialista en WordPress: creación, rediseño, e-commerce, SEO, mantenimiento y alojamiento de webs rápidas y a medida.",
+    "title": "Peleweb — Desarrollador web freelance especializado en WordPress",
+    "description": "Umberto Persichini, desarrollador web freelance especializado en WordPress: creación, rediseño, e-commerce, SEO, mantenimiento y alojamiento de sitios web eficaces y a medida.",
     "locale": "es_ES"
   },
   "ui": {
@@ -267,5 +267,13 @@
     "fr": "Français",
     "en": "English",
     "es": "Español"
+  },
+  "consent": {
+    "text": "Uso Google Analytics para saber cuántas personas visitan el sitio y qué páginas les interesan. Estas cookies solo se instalan con su consentimiento.",
+    "accept": "Aceptar",
+    "refuse": "Rechazar",
+    "more": "Más información",
+    "manage": "Gestionar cookies",
+    "title": "Cookies"
   }
 }

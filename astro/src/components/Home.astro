@@ -1,5 +1,5 @@
 ---
-/** Page d'accueil complète, identique en français et en anglais. */
+/** Page d'accueil complète, en français, anglais et espagnol. */
 import Base from '../layouts/Base.astro';
 import Header from './Header.astro';
 import Hero from './Hero.astro';
@@ -16,14 +16,17 @@ import Cta from './Cta.astro';
 import Footer from './Footer.astro';
 import { getContent, type Lang } from '../lib/content';
 import { t as dictionary } from '../i18n';
+import { homeJsonLd } from '../lib/seo';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = dictionary(lang);
 const data = await getContent(lang);
 const paths = { fr: '/', en: '/en/', es: '/es/' };
+const jsonLd = JSON.stringify(homeJsonLd(lang, t, data)).replace(/</g, '\\u003c');
 ---
 <Base lang={lang} title={t.meta.title} description={t.meta.description} locale={t.meta.locale} paths={paths}>
+  <script slot="head" type="application/ld+json" set:html={jsonLd} />
   <Header t={t} lang={lang} paths={paths} />
   <main id="contenu">
     <Hero t={t} />

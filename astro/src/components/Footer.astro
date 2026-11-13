@@ -1,4 +1,5 @@
 ---
+import { GA_ID } from '../config';
 import type { Lang } from '../lib/content';
 const { t, paths } = Astro.props;
 const home = t.ui.home;
@@ -37,7 +38,7 @@ const langs: Lang[] = ['fr', 'en', 'es'];
     <p class="giant gt" aria-hidden="true">peleweb</p>
     <div class="ft-bot">
       <span>© {new Date().getFullYear()} Peleweb by Umberto Persichini</span>
-      <span class="ft-legal"><a href={t.ui.legalPath}>{t.ft.legal}</a><a href={t.ui.privacyPath}>{t.ft.privacy}</a></span>
+      <span class="ft-legal"><a href={t.ui.legalPath}>{t.ft.legal}</a><a href={t.ui.privacyPath}>{t.ft.privacy}</a>{GA_ID && <button type="button" class="ft-cookies" data-consent-open>{t.consent.manage}</button>}</span>
     </div>
   </div>
 </footer>

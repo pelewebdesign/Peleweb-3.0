@@ -62,7 +62,7 @@ img{max-width:100%}
 /* ---------- En-tête (V1) ---------- */
 .progress{display:none}
 @supports (animation-timeline: scroll()){.progress{display:block;position:fixed;top:0;left:0;right:0;height:3px;z-index:70;transform-origin:0 50%;background:linear-gradient(90deg,var(--c1),var(--c3),var(--c2));animation:prog linear both;animation-timeline:scroll(root)}}
-.hd{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:60;width:calc(100% - 32px);max-width:1240px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:8px 8px 8px 22px;border-radius:999px;background:var(--head-bg);backdrop-filter:blur(26px) saturate(1.8);-webkit-backdrop-filter:blur(26px) saturate(1.8);border:1px solid var(--line);color:var(--text);box-shadow:0 10px 40px -20px rgba(13,10,28,.45)}
+.hd{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:60;width:calc(100% - 32px);max-width:1240px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:8px 8px 8px 22px;border-radius:999px;background:var(--head-bg);backdrop-filter:blur(26px) saturate(1.8);border:1px solid var(--line);color:var(--text);box-shadow:0 10px 40px -20px rgba(13,10,28,.45)}
 .logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-family:'Bricolage Grotesque Variable',sans-serif;font-weight:700;font-size:24px;letter-spacing:-.05em}
 .logo-orb{width:26px;height:26px;border-radius:50%;background:conic-gradient(from 200deg,var(--c1),var(--c3),var(--c2),var(--c4),var(--c1));animation:spin 8s linear infinite}
 .hd-nav{display:flex;gap:2px}
@@ -333,7 +333,7 @@ img{max-width:100%}
 .tarifs{overflow:hidden}
 .tarifs .wrap{position:relative;z-index:2}
 .prices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
-.price{position:relative;overflow:hidden;display:flex;flex-direction:column;padding:40px 36px;border-radius:34px;background:var(--surface-2);border:1px solid var(--line);color:var(--text);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.price{position:relative;overflow:hidden;display:flex;flex-direction:column;padding:40px 36px;border-radius:34px;background:var(--surface-2);border:1px solid var(--line);color:var(--text);backdrop-filter:blur(10px)}
 .price > *{position:relative;z-index:2}
 .price h3{font-size:34px}
 .price .desc{color:var(--muted);font-size:16px;margin-top:10px;min-height:52px}
@@ -508,14 +508,14 @@ body{font-size:16px}
 .gt,.prow .pname span,.pword span{padding-right:.1em;margin-right:-.1em;padding-bottom:.04em}
 
 /* ---------- En-tête : sélecteur de langue ---------- */
-.mnav{background:var(--head-solid);backdrop-filter:blur(26px) saturate(1.8);-webkit-backdrop-filter:blur(26px) saturate(1.8)}
+.mnav{background:var(--head-solid);backdrop-filter:blur(26px) saturate(1.8)}
 details.lang{position:relative}
 details.lang summary{list-style:none;display:flex;align-items:center;gap:4px;height:44px;padding:0 10px 0 14px;border-radius:999px;border:1px solid var(--line);cursor:pointer;font-size:13px;font-weight:600;transition:background .3s}
 details.lang summary::-webkit-details-marker{display:none}
 details.lang summary:hover{background:var(--ico-bg)}
 details.lang summary svg{width:14px;height:14px;transition:transform .3s}
 details.lang[open] summary svg{transform:rotate(180deg)}
-details.lang ul{position:absolute;right:0;top:calc(100% + 10px);z-index:80;min-width:180px;list-style:none;margin:0;padding:6px;border-radius:18px;background:var(--head-solid);border:1px solid var(--line);backdrop-filter:blur(26px);-webkit-backdrop-filter:blur(26px);box-shadow:0 24px 60px -24px rgba(13,10,28,.55)}
+details.lang ul{position:absolute;right:0;top:calc(100% + 10px);z-index:80;min-width:180px;list-style:none;margin:0;padding:6px;border-radius:18px;background:var(--head-solid);border:1px solid var(--line);backdrop-filter:blur(26px);box-shadow:0 24px 60px -24px rgba(13,10,28,.55)}
 details.lang ul a{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;text-decoration:none;font-size:15px;color:var(--text)}
 details.lang ul a span{width:22px;font-family:'Geist Mono',monospace;font-size:11px;color:var(--muted)}
 details.lang ul a:hover,details.lang ul a[aria-current]{background:var(--ico-bg)}
@@ -684,12 +684,10 @@ details.lang ul a[aria-current]{font-weight:600}
 }
 
 /* ---------- Logos clients : blancs sur fond sombre en thème sombre ---------- */
-:root[data-theme="dark"] .logos,:root:not([data-theme]) .logos{background:var(--bg-alt);border-color:var(--line)}
+:root[data-theme="dark"] .logos,:root:not([data-theme]) .logos{background:var(--bg);border-color:var(--line)}
 :root[data-theme="dark"] .lg-slot img,:root:not([data-theme]) .lg-slot img{filter:brightness(0) invert(1);opacity:.88}
 :root[data-theme="dark"] .lg-slot,:root:not([data-theme]) .lg-slot{color:var(--muted)}
 /* Logos des avis : blancs, sans pastille, sauf sur la carte pastel */
-:root[data-theme="dark"] .qc:not(.pastel) .q-logo,:root:not([data-theme]) .qc:not(.pastel) .q-logo{background:transparent;border-color:var(--line)}
-:root[data-theme="dark"] .qc:not(.pastel) .q-logo img,:root:not([data-theme]) .qc:not(.pastel) .q-logo img{filter:brightness(0) invert(1)}
 
 /* ---------- Approche : photo à droite ---------- */
 .bio{align-items:center;justify-content:space-between;gap:24px 40px}
@@ -714,3 +712,86 @@ details.lang ul a[aria-current]{font-weight:600}
 .legal-date{color:var(--muted);margin:-20px 0 8px}
 .legal p{line-height:1.7}
 .legal a{color:var(--text)}
+
+/* ---------- Hero : chiffres clés en cartes sous le texte ---------- */
+.hero{padding-bottom:64px}
+.hero-row{align-items:flex-end}
+.hero-left{display:flex;flex-direction:column;gap:26px;max-width:600px}
+.hero-left .stats{margin:0;border:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;animation:fade 1s .9s both}
+.hero-left .stat,.hero-left .stat + .stat{display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:16px 18px;border:1px solid var(--line-2);border-radius:16px;background:color-mix(in oklab,var(--bg) 40%,transparent);backdrop-filter:blur(8px)}
+.hero-left .stat b{font-size:32px;line-height:1;letter-spacing:-.04em}
+.hero-left .stat span{font-size:13px;line-height:1.35}
+@media (max-width:640px){
+.hero-left .stats{grid-template-columns:minmax(0,1fr);gap:10px}
+.hero-left .stat,.hero-left .stat + .stat{flex-direction:row;align-items:center;gap:16px;padding:14px 18px}
+.hero-left .stat b{font-size:28px;min-width:64px}
+.hero-left .stat span{font-size:14px}
+}
+
+/* =========================================================
+   RETOURS NOVEMBRE (3)
+   ========================================================= */
+
+/* Menu : flou plus léger */
+.hd{backdrop-filter:blur(14px) saturate(1.4)}
+
+/* Bandeau logos : même fond que la section Services */
+.logos{background:var(--bg);border-color:var(--line)}
+
+/* Services : carte « Création » moins haute */
+.svc{min-height:250px;gap:28px}
+.svc-feat{min-height:0}
+.svc-feat{padding-top:54px}
+.svc-feat .svc-top{position:absolute;top:22px;right:30px;z-index:3}
+.svc-feat .svc-top .ico{display:none}
+.svc-feat .bld{aspect-ratio:2.5 / 1}
+.svc-feat h3{font-size:clamp(36px,3.6vw,56px)}
+
+/* Tarifs : bloc maintenance sans pointillés, aligné sur le reste */
+.maint-block,.maint{border:0;padding:0;border-radius:0}
+
+/* Avis : cartes plus compactes */
+.qc{min-height:380px}
+.qc blockquote{font-size:clamp(24px,2.2vw,32px)}
+
+/* Pages légales : même largeur que la page d'accueil */
+.wrap.legal{max-width:1320px}
+.legal p{max-width:880px}
+
+/* Pastille du hero */
+.av-sep{white-space:pre}
+
+@media (max-width:640px){
+  /* Pastille : sans cadre, nom puis métier à la ligne */
+  .avail{border:0;padding:0;background:none;border-radius:0;align-items:flex-start;gap:10px}
+  .avail .dot{margin-top:4px}
+  .av-who{display:flex;flex-direction:column;gap:2px}
+  .av-sep{display:none}
+
+  /* Services : animation plus petite, titres sur une ligne */
+  .svc h3,.svc-feat h3{font-size:27px;letter-spacing:-.035em}
+  .svc-feat p{font-size:16px}
+  .svc-feat{padding-top:32px}
+  .svc-feat .svc-top{position:static}
+  .svc-feat .bld{width:118%;margin:0 -24% -8px 0;aspect-ratio:2 / 1.05}
+
+  /* Approche : tout centré */
+  .bio{align-items:center;text-align:center}
+  .bio .lbl{margin-left:auto;margin-right:auto}
+
+  /* Avis : texte plus petit */
+  .qc{min-height:0;padding:26px;gap:28px}
+  .qc blockquote{font-size:22px;line-height:1.18}
+}
+
+/* ---------- Bandeau cookies ---------- */
+.cc{position:fixed;left:16px;bottom:16px;z-index:90;width:min(420px,calc(100% - 32px));padding:22px 22px 20px;border-radius:24px;background:var(--head-solid);backdrop-filter:blur(14px) saturate(1.4);border:1px solid var(--line);color:var(--text);box-shadow:0 30px 70px -30px rgba(13,10,28,.6);opacity:0;transform:translateY(16px);transition:opacity .4s,transform .4s cubic-bezier(.2,.7,.1,1)}
+.cc.is-in{opacity:1;transform:none}
+.cc-title{font-size:20px;letter-spacing:-.03em;margin-bottom:6px}
+.cc-text{font-size:14px;line-height:1.55;color:var(--muted)}
+.cc-text a{color:var(--text)}
+.cc-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.cc-btn{font:inherit;font-size:15px;font-weight:500;padding:12px 16px;border-radius:999px;border:1px solid var(--line-2);background:transparent;color:var(--text);cursor:pointer;transition:background .25s,color .25s}
+.cc-btn:hover,.cc-btn:focus-visible{background:var(--solid-bg);color:var(--solid-fg)}
+.ft-cookies{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+@media (max-width:640px){.cc{left:8px;right:8px;bottom:8px;width:auto}}

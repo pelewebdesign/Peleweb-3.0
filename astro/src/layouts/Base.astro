@@ -10,6 +10,9 @@ import '@fontsource/geist-mono/400.css';
 import '@fontsource/geist-mono/500.css';
 import '../styles/global.css';
 import type { Lang } from '../lib/content';
+import CookieConsent from '../components/CookieConsent.astro';
+import { t as dictionary } from '../i18n';
+import { GSC_VERIFICATION } from '../config';
 
 interface Props {
   lang: Lang;
@@ -23,6 +26,8 @@ interface Props {
 const { lang, title, description, locale, paths } = Astro.props;
 const site = Astro.site ?? new URL('https://peleweb.com');
 const canonical = new URL(paths[lang], site).href;
+const ogImage = new URL(`/og/og-${lang}.jpg`, site).href;
+const ogLocales = { fr: 'fr_FR', en: 'en_GB', es: 'es_ES' };
 ---
 <!doctype html>
 <html lang={lang} data-theme="dark">
@@ -41,6 +46,22 @@ const canonical = new URL(paths[lang], site).href;
 <meta property="og:description" content={description}>
 <meta property="og:url" content={canonical}>
 <meta property="og:locale" content={locale}>
+{Object.entries(ogLocales).filter(([l]) => l !== lang).map(([, v]) => <meta property="og:locale:alternate" content={v}>)}
+<meta property="og:site_name" content="Peleweb">
+<meta property="og:image" content={ogImage}>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content={title}>
+<meta name="twitter:description" content={description}>
+<meta name="twitter:image" content={ogImage}>
+<meta name="author" content="Umberto Persichini">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+{GSC_VERIFICATION && <meta name="google-site-verification" content={GSC_VERIFICATION}>}
+<link rel="sitemap" href="/sitemap.xml">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<slot name="head" />
 <meta name="theme-color" content="#0D0A1C">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <script is:inline>
@@ -64,6 +85,7 @@ const canonical = new URL(paths[lang], site).href;
   </filter>
 </svg>
 <slot />
+<CookieConsent t={dictionary(lang)} />
 
 <script>
   const root = document.documentElement;

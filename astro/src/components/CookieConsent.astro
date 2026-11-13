@@ -1,0 +1,79 @@
+---
+/**
+ * Bandeau de consentement + chargement de Google Analytics APRÈS accord uniquement.
+ * - Accepter / Refuser, aussi simples l'un que l'autre (recommandations CNIL).
+ * - Choix mémorisé 6 mois (stockage local « pw-consent »), puis redemandé.
+ * - Tout élément [data-consent-open] (lien « Gérer les cookies ») rouvre le bandeau.
+ * N'est affiché que si PUBLIC_GA_ID est défini.
+ */
+import { GA_ID } from '../config';
+const { t } = Astro.props;
+const c = t.consent;
+---
+{GA_ID && (
+  <div class="cc" id="cc" role="dialog" aria-modal="false" aria-labelledby="cc-title" aria-describedby="cc-text" hidden data-ga={GA_ID}>
+    <p class="cc-title disp" id="cc-title">{c.title}</p>
+    <p class="cc-text" id="cc-text">{c.text} <a href={t.ui.privacyPath}>{c.more}</a></p>
+    <div class="cc-btns">
+      <button type="button" class="cc-btn" data-consent="denied">{c.refuse}</button>
+      <button type="button" class="cc-btn" data-consent="granted">{c.accept}</button>
+    </div>
+  </div>
+)}
+
+<script>
+  const box = document.getElementById('cc');
+  if (box) {
+    const ID = box.dataset.ga as string;
+    const KEY = 'pw-consent';
+    const MAX_AGE = 1000 * 60 * 60 * 24 * 182; // 6 mois
+
+    const read = (): string | null => {
+      try {
+        const v = JSON.parse(localStorage.getItem(KEY) || 'null');
+        return v && Date.now() - v.t < MAX_AGE ? v.v : null;
+      } catch { return null; }
+    };
+    const save = (v: string) => { try { localStorage.setItem(KEY, JSON.stringify({ v, t: Date.now() })); } catch {} };
+
+    let loaded = false;
+    const loadGA = () => {
+      if (loaded) return;
+      loaded = true;
+      const w = window as any;
+      w.dataLayer = w.dataLayer || [];
+      w.gtag = function () { w.dataLayer.push(arguments); };
+      w.gtag('js', new Date());
+      w.gtag('config', ID);
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(ID)}`;
+      document.head.appendChild(s);
+    };
+    // Retrait du consentement : on efface les cookies Google Analytics existants.
+    const clearGA = () => {
+      (window as any)[`ga-disable-${ID}`] = true;
+      const host = location.hostname;
+      const domains = ['', host, '.' + host, '.' + host.split('.').slice(-2).join('.')];
+      document.cookie.split(';').map((c) => c.split('=')[0].trim()).filter((n) => n === '_ga' || n.startsWith('_ga_') || n === '_gid')
+        .forEach((n) => domains.forEach((d) => { document.cookie = `${n}=; Max-Age=0; path=/${d ? '; domain=' + d : ''}`; }));
+    };
+
+    const show = () => { box.hidden = false; requestAnimationFrame(() => box.classList.add('is-in')); };
+    const hide = () => { box.classList.remove('is-in'); box.hidden = true; };
+
+    box.querySelectorAll<HTMLButtonElement>('[data-consent]').forEach((b) => b.addEventListener('click', () => {
+      const v = b.dataset.consent as string;
+      const before = read();
+      save(v);
+      hide();
+      if (v === 'granted') loadGA();
+      else if (before === 'granted' || loaded) { clearGA(); location.reload(); }
+    }));
+    document.querySelectorAll('[data-consent-open]').forEach((el) => el.addEventListener('click', (e) => { e.preventDefault(); show(); }));
+
+    const choice = read();
+    if (choice === 'granted') loadGA();
+    else if (choice === null) show();
+  }
+</script>

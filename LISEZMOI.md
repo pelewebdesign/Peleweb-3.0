@@ -91,7 +91,32 @@ Il faut **Node.js 22.23.4 ou plus récent** (nodejs.org).
 - **Captures des projets** : 1440 × 900 px. Sanity crée automatiquement la version mobile et le format WebP/AVIF. Le point d'intérêt (« hotspot ») permet de choisir la zone gardée lors du recadrage.
 - **Logos** : SVG ou PNG **à fond transparent**, recadrés au plus près. Ils s'affichent en couleur en thème clair et **en blanc en thème sombre**.
 
-### Cookies et RGPD
+### Google Analytics et bandeau cookies
 
-- Le site ne dépose aucun cookie et ne contacte aucun service tiers : les polices sont hébergées sur le site. **Aucun bandeau de cookies n'est donc nécessaire.**
-- Si vous ajoutez un jour un outil de statistiques (Google Analytics, Meta Pixel…), il faudra un bandeau de consentement : CookieYes fera alors l'affaire. Une solution sans cookie comme Plausible ou Netlify Analytics permet de s'en passer.
+Le bandeau de consentement et Google Analytics s'activent dès que la variable **`PUBLIC_GA_ID`** est ajoutée sur Netlify (Site configuration › Environment variables), puis un nouveau déploiement lancé.
+
+- La valeur attendue est l'**ID de mesure**, au format `G-XXXXXXXXXX` (et non l'ID de propriété à 9 chiffres). Vous le trouvez dans Google Analytics › **Admin** › **Flux de données** › votre flux Web › « ID de mesure ».
+- Google Analytics n'est chargé **qu'après un clic sur « Accepter »**. Le choix est gardé 6 mois, puis redemandé. Le lien « Gérer les cookies » en bas de page permet de changer d'avis.
+- Dans Google Analytics › Admin › **Conservation des données**, réglez la durée sur **14 mois** (c'est ce qu'indique la politique de confidentialité).
+
+### Google Search Console
+
+Le plus simple : ajoutez une propriété de type **Domaine** (`peleweb.com`) et validez-la avec l'enregistrement **TXT** que Google vous donne, dans la zone DNS OVH. Aucun code n'est nécessaire, et la validation couvre www, http et https.
+
+Ensuite, dans Search Console › **Sitemaps**, envoyez : `https://peleweb.com/sitemap.xml`.
+
+(Si vous préférez la validation par balise HTML, mettez seulement le code de la balise dans la variable Netlify `PUBLIC_GSC_VERIFICATION`.)
+
+Pensez aussi à **Bing Webmaster Tools** (bing.com/webmasters › « Importer depuis Google Search Console ») : Bing alimente ChatGPT et Copilot.
+
+### Référencement et IA
+
+Générés automatiquement à chaque build, à partir des contenus Sanity et des traductions :
+
+| Fichier | Rôle |
+|---|---|
+| `/sitemap.xml` | Plan du site, avec les versions FR / EN / ES liées. |
+| `/robots.txt` | Autorise Google, Bing et les robots IA (ChatGPT, Claude, Perplexity, Gemini, Apple…). |
+| `/llms.txt` | Résumé du site en Markdown pour les assistants IA : services, tarifs, réalisations, avis, FAQ, contact. |
+| Données structurées (JSON-LD) | Dans la page d'accueil : entreprise, personne, services, tarifs, réalisations et FAQ, lisibles par Google et les IA. |
+| Images de partage | `public/og/og-fr.jpg`, `og-en.jpg`, `og-es.jpg` (aperçu sur LinkedIn, WhatsApp, Slack…). |
