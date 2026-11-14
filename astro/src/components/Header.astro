@@ -2,11 +2,13 @@
 import Arrow from './Arrow.astro';
 import LangSwitch from './LangSwitch.astro';
 const { t, lang, paths } = Astro.props;
+// Liens vers les sections de l'accueil : « /#services » fonctionne aussi depuis les pages légales.
+const home = t.ui.home;
 const links = [
-  ['#services', t.nav.services],
-  ['#projets', t.nav.projets],
-  ['#tarifs', t.nav.tarifs],
-  ['#faq', 'FAQ'],
+  [`${home}#services`, t.nav.services],
+  [`${home}#projets`, t.nav.projets],
+  [`${home}#tarifs`, t.nav.tarifs],
+  [`${home}#faq`, 'FAQ'],
 ];
 ---
 <a class="skip" href="#contenu">{t.ui.skip}</a>
