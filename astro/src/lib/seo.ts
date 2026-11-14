@@ -6,6 +6,8 @@ import type { Lang } from './content';
 
 export const SITE = 'https://peleweb.com';
 export const EMAIL = 'contact@peleweb.com';
+export const PHONE = '+33765580006';
+export const WHATSAPP = 'https://wa.me/33765580006';
 export const MALT = 'https://www.malt.fr/profile/umbertopersichini';
 export const HOME_PATHS = { fr: '/', en: '/en/', es: '/es/' } as const;
 const INLANG = { fr: 'fr-FR', en: 'en', es: 'es' } as const;
@@ -42,6 +44,7 @@ export function homeJsonLd(lang: Lang, t: any, data: any) {
     image: `${SITE}/og/og-${lang}.jpg`,
     description: t.meta.description,
     email: EMAIL,
+    telephone: PHONE,
     founder: { '@id': `${SITE}/#umberto` },
     address: { '@type': 'PostalAddress', streetAddress: '7 rue de l’Amazone', postalCode: '95490', addressLocality: 'Vauréal', addressCountry: 'FR' },
     areaServed: [{ '@type': 'Country', name: 'France' }, { '@type': 'Place', name: 'Europe' }],

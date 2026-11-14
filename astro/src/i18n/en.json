@@ -259,7 +259,8 @@
     "home": "/en/",
     "legalTitle": "Legal notice",
     "privacyPath": "/en/privacy-policy/",
-    "privacyTitle": "Privacy policy"
+    "privacyTitle": "Privacy policy",
+    "whatsapp": "Message me on WhatsApp"
   },
   "lang": {
     "label": "Language",

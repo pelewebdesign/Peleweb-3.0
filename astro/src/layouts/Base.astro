@@ -11,6 +11,7 @@ import '@fontsource/geist-mono/500.css';
 import '../styles/global.css';
 import type { Lang } from '../lib/content';
 import CookieConsent from '../components/CookieConsent.astro';
+import WhatsApp from '../components/WhatsApp.astro';
 import { t as dictionary } from '../i18n';
 import { GSC_VERIFICATION } from '../config';
 
@@ -85,6 +86,7 @@ const ogLocales = { fr: 'fr_FR', en: 'en_GB', es: 'es_ES' };
   </filter>
 </svg>
 <slot />
+<WhatsApp label={dictionary(lang).ui.whatsapp} />
 <CookieConsent t={dictionary(lang)} />
 
 <script>

@@ -6,7 +6,7 @@
 import type { APIRoute } from 'astro';
 import { getContent } from '../lib/content';
 import { t as dictionary } from '../i18n';
-import { SITE, EMAIL, MALT } from '../lib/seo';
+import { SITE, EMAIL, MALT, WHATSAPP } from '../lib/seo';
 
 export const GET: APIRoute = async () => {
   const fr = dictionary('fr');
@@ -19,7 +19,7 @@ export const GET: APIRoute = async () => {
 
 > ${fr.meta.description}
 
-Peleweb est l’activité de développeur web freelance d’Umberto Persichini (micro-entreprise française, Vauréal, Val-d’Oise, Île-de-France). Il conçoit, développe, héberge et maintient des sites WordPress et des boutiques WooCommerce pour les artisans, indépendants, professions libérales, PME et agences, en France et à l’international, en français, anglais et espagnol.
+Peleweb est l’activité de développeur web freelance d’Umberto Persichini (auto-entreprise française, Vauréal, Val-d’Oise, Île-de-France). Il conçoit, développe, héberge et maintient des sites WordPress et des boutiques WooCommerce pour les artisans, indépendants, professions libérales, PME et agences, en France et à l’international, en français, anglais et espagnol.
 
 ## En bref
 
@@ -28,7 +28,7 @@ Peleweb est l’activité de développeur web freelance d’Umberto Persichini (
 - Expérience : ${fr.hero.n1} ${fr.hero.s1}, ${fr.hero.n2} ${fr.hero.s2}
 - Langues de travail : français, anglais, espagnol
 - Zone : France (Île-de-France) et à distance partout dans le monde
-- Contact : ${EMAIL} (devis gratuit et personnalisé)
+- Contact : ${EMAIL} ou WhatsApp ${WHATSAPP} (devis gratuit et personnalisé)
 - Profil et avis : ${MALT}
 - Site : ${SITE}/ (FR), ${SITE}/en/ (EN), ${SITE}/es/ (ES)
 
